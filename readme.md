@@ -1,0 +1,1 @@
+Test automation project using the pytest/appium framework
