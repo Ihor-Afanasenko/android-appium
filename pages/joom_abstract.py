@@ -43,11 +43,39 @@ class JoomAbstract(ABC):
         raise NotImplementedError()
 
     @abstractmethod
+    def click_search_menu(self):
+        raise NotImplementedError()
+
+    @abstractmethod
+    def click_profile_menu(self):
+        raise NotImplementedError()
+
+    @abstractmethod
+    def click_my_orders(self):
+        raise NotImplementedError()
+
+    @abstractmethod
+    def click_refunds(self):
+        raise NotImplementedError()
+
+    @abstractmethod
+    def click_favorites(self):
+        raise NotImplementedError()
+
+    @abstractmethod
+    def click_notifications(self):
+        raise NotImplementedError()
+
+    @abstractmethod
     def click_back_button(self):
         raise NotImplementedError()
 
     @abstractmethod
     def get_toolbar_title(self):
+        raise NotImplementedError()
+
+    @abstractmethod
+    def get_profile_header_name(self):
         raise NotImplementedError()
 
     @abstractmethod

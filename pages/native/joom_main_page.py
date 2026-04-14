@@ -47,6 +47,55 @@ class JoomMainPage(JoomAbstract):
         )
 
     @property
+    def search_menu(self):
+        return self.driver.find_element(
+            AppiumBy.ANDROID_UIAUTOMATOR,
+            'new UiSelector().description("Search")',
+        )
+
+    @property
+    def profile_header_name(self):
+        return self.driver.find_element(
+            AppiumBy.ID,
+            "com.joom:id/profile_header_name",
+        )
+
+    @property
+    def profile_menu(self):
+        return self.driver.find_element(
+            AppiumBy.ANDROID_UIAUTOMATOR,
+            'new UiSelector().description("Profile")',
+        )
+
+    @property
+    def my_orders_button(self):
+        return self.driver.find_element(
+            AppiumBy.ANDROID_UIAUTOMATOR,
+            'new UiSelector().text("My orders")',
+        )
+
+    @property
+    def refunds_button(self):
+        return self.driver.find_element(
+            AppiumBy.ANDROID_UIAUTOMATOR,
+            'new UiSelector().text("Refunds")',
+        )
+
+    @property
+    def favourites_option(self):
+        return self.driver.find_element(
+            AppiumBy.ANDROID_UIAUTOMATOR,
+            'new UiSelector().text("Favourites")',
+        )
+
+    @property
+    def notifications_option(self):
+        return self.driver.find_element(
+            AppiumBy.ANDROID_UIAUTOMATOR,
+            'new UiSelector().text("Notifications")',
+        )
+
+    @property
     def back_button(self):
         return self.driver.find_element(
             AppiumBy.ANDROID_UIAUTOMATOR,
@@ -95,6 +144,30 @@ class JoomMainPage(JoomAbstract):
         self.favorites_menu.click()
         return self
 
+    def click_search_menu(self):
+        self.search_menu.click()
+        return self
+
+    def click_profile_menu(self):
+        self.profile_menu.click()
+        return self
+
+    def click_my_orders(self):
+        self.my_orders_button.click()
+        return self
+
+    def click_refunds(self):
+        self.refunds_button.click()
+        return self
+
+    def click_favorites(self):
+        self.favourites_option.click()
+        return self
+
+    def click_notifications(self):
+        self.notifications_option.click()
+        return self
+
     def click_back_button(self):
         self.back_button.click()
         return self
@@ -113,6 +186,9 @@ class JoomMainPage(JoomAbstract):
             AppiumBy.ANDROID_UIAUTOMATOR,
             'new UiSelector().resourceId("com.joom:id/toolbar_title")',
         ).text
+
+    def get_profile_header_name(self):
+        return self.profile_header_name.text
 
     def is_search_bar_displayed(self):
         return self.search_field_unfocused.is_displayed()
