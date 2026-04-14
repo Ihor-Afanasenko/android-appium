@@ -8,7 +8,7 @@ class Capabilities(Enum):
         "platformVersion": "17",
         "browserName": "Chrome",
         "deviceName": "Pixel 9 Pro",
-        "chromedriverExecutable": "/home/ihor/PycharmProjects/appium_examples-master/app/chromedriver",
+        "chromedriverExecutable": "path to chromedriver",
         "autoGrantPermissions": True,
     }
 
@@ -18,5 +18,5 @@ class Capabilities(Enum):
         "platformVersion": "17",
         "deviceName": "Pixel 9 Pro",
         "appium:autoGrantPermissions": True,
-        "app": "/home/ihor/PycharmProjects/android_appium/app/joom_4.182.0.apk",
+        "app": "path to apk",
     }
